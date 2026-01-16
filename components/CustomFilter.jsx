@@ -1,11 +1,5 @@
-
-
 const CustomFilter = () => {
-  return (
-    <div>
-      Custom Filter
-    </div>
-  )
-}
+  return <div>Custom Filter Component</div>;
+};
 
-export default CustomFilter
+export default CustomFilter;

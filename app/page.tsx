@@ -17,6 +17,7 @@ export default function Home() {
 
           <div className="home__filter-container">
             <CustomFilter title = "fuel"/>
+            <CustomFilter title = "fuel"/>
           </div>
         </div>
       </div>
