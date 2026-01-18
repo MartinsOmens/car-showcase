@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import SearchBar from './SearchBar';
 import CustomFilter from './CustomFilter';
+import CardCar from './CardCar';
 
 export {
     Hero,
@@ -11,5 +12,6 @@ export {
     Navbar, 
     SearchBar,
     CustomFilter,
-    Footer
+    Footer,
+    CardCar
 }
