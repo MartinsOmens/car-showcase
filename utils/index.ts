@@ -1,11 +1,11 @@
+import { CarCardProps } from "@/types";
 import axios from "axios";
 
 const API_BASE_URL = "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars";
-// const API_HOST = "cars-by-api-ninjas.p.rapidapi.com";
 
-export async function fetchCars(model = "corolla") {
-  if (!process.env.RAPIDAPI_KEY) {
-    throw new Error("RAPIDAPI_KEY is not defined");
+export async function fetchCars(model = "carrera") {
+  if (!process.env.RAPIDAPI_KEY || !process.env.RAPIDAPI_HOST) {
+    throw new Error("RapidAPI credentials are missing");
   }
 
   try {
@@ -23,3 +23,10 @@ export async function fetchCars(model = "corolla") {
     throw error;
   }
 }
+
+const cars = await fetchCars("carrera");
+// console.log(cars.length);    
+
+//THE SECOND API FOR FETCHING CAR IMAGES
+
+export const fetchCarImageURL = (car: CarCardProps, angle?: string) => {};

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default async function Home() {
   const allCars = await fetchCars();
-  console.log(allCars);
+  // console.log(allCars);
   const isDataEmpty = !Array.isArray(allCars) || allCars.length === 0;
 
   return (
@@ -30,9 +30,7 @@ export default async function Home() {
           <section>
             <div className="home__cars-wrapper">
               {allCars?.map((car) => (
-                <div>
-                  <CardCar car={car} />
-                </div>
+                <CardCar key={`${car.make}-${car.model}-${car.year}`} car={car} />
               ))}
             </div>
           </section>
